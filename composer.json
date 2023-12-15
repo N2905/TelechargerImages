@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.7",
+        "phpoffice/phpspreadsheet": "^1.12",
+        "twbs/bootstrap": "^5.3"
+    }
+}
