@@ -27,7 +27,6 @@
         }
         .buttonDown {
             display: flex;
-            padding-left: 173px;
         }
         .down {
             margin-right: 3px;
@@ -37,6 +36,9 @@
         }
         #container-down {
             width: 600px;
+        }
+        .return {
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -49,42 +51,43 @@
             <div class="row mb-3">
                 <label for="destination" class="col-sm-4 col-form-label">Dossier de destination : </label>
                 <div class="col-sm-6">
-                    <input type="text" name="destination" id="destination" class="form-control form-control-sm" required>
+                    <input type="text" name="destination" id="destination" class="form-control form-control-sm" >
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="batchSize" class="col-sm-4 col-form-label">Taille du lot : </label>
                 <div class="col-sm-6">
-                    <input type="number" name="batchSize" id="batchSize" class="form-control form-control-sm" required>
+                    <input type="number" name="batchSize" id="batchSize" class="form-control form-control-sm" >
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="delay" class="col-sm-4 col-form-label">Délai entre les lots (en secondes) : </label>
                 <div class="col-sm-6">
-                    <input type="number" name="delay" id="delay" class="form-control form-control-sm" required>
+                    <input type="number" name="delay" id="delay" class="form-control form-control-sm" >
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="linkColumn" class="col-sm-4 col-form-label">Numero du colonne qui a le lien images : </label>
                 <div class="col-sm-6">
-                    <input type="number" name="linkColumn" id="linkColumn" class="form-control form-control-sm" required>
+                    <input type="number" name="linkColumn" id="linkColumn" class="form-control form-control-sm" >
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="nameColumn" class="col-sm-4 col-form-label">Numero du colonne qui a le nom spécifique : </label>
                 <div class="col-sm-6">
-                    <input type="number" name="nameColumn" id="nameColumn" class="form-control form-control-sm" required>
+                    <input type="number" name="nameColumn" id="nameColumn" class="form-control form-control-sm" >
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="File" class="col-sm-4 col-form-label">Fichier CSV : </label>
                 <div class="col-sm-6">
-                    <input type="file" name="csvFile"  accept=".csv" class="form-control form-control-sm" required> <!--csvFile-->
+                    <input type="file" name="csvFile"  accept=".csv" class="form-control form-control-sm" > <!--csvFile-->
                 </div>
             </div>
             <div class="buttonDown">
                 <button class="down">Télécharger</button>
                 <button class="cancel">Annuler</button>
+                <button class="return"><a href="/accueil.php">Retour</a></button>
             </div>
         </form>
     </div> 
