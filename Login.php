@@ -15,27 +15,54 @@
 <body>
 
 <?php
+        $serveur = "localhost";
+        $utilisateur = "root";
+        $mot_de_passe = "riri";
+        $nom_base_de_donnees = "telechargementimages";
+
+        $connexion = new mysqli($serveur, $utilisateur, $mot_de_passe, $nom_base_de_donnees);
+
+        // Vérifier la connexion
+        if ($connexion->connect_error) {
+            die("La connexion à la base de données a échoué : " . $connexion->connect_error);
+        }
+
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les valeurs du formulaire
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    // Vérifier les informations de connexion (à des fins de démonstration, utilisez des méthodes de hachage sécurisées dans un environnement réel)
-    $valid_username = "utilisateur"; // Remplacez ceci par le nom d'utilisateur réel
-    $valid_password = "motdepasse"; // Remplacez ceci par le mot de passe réel
+    $req_login = "SELECT * FROM users WHERE username = $username";
+    $req_login_resultat = $connexion->query($req_login);
 
     // Vérifier les informations d'identification
-    if ($username === $valid_username && $password === $valid_password) {
-        echo "<p>Connexion réussie !</p>";
+
+    if ($req_login_resultat && $req_login_resultat->num_rows > 0) {
+        $utilisateur = $req_login_resultat->fetch_assoc();
+
+        // Vérifier le mot de passe
+        if (password_verify($password, $utilisateur["password"])) {
+            echo "<p>Connexion réussie. Bienvenue, {$utilisateur['prenom']}!</p>";
+
+            // Définir la variable de session pour l'utilisateur connecté
+            session_start();
+            $_SESSION["users"] = $utilisateur["id"];
+
+            // Rediriger vers la page de gestion des sessions (dashboard.php) ou une autre page sécurisée
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            echo "<p>Mot de passe incorrect.</p>";
+        }
     } else {
-        echo "<p>Identifiants incorrects. Veuillez réessayer.</p>";
+        echo "<p>Aucun utilisateur trouvé avec cet username.</p>";
     }
 }
 ?>
 
 <!-- Formulaire de connexion -->
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

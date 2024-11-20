@@ -12,35 +12,19 @@
 
     <!-- Inclure le fichier JavaScript Bootstrap -->
     <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    	.titleRedimensionner{
-    		padding: 10px 0 0 0;
-    		color: #198754;
-    	}
-    	.buttonRedimensionner button {
-    		width: 150px;
-    		border: 2px solid #198754;
-    		border-radius: 12px;
-    		height: 2rem;
-    		background-color: white;
-    		font-weight: bold;
-    	}
-    	.buttonRedimensionner {
-    		display: flex;
-    		padding-left: 120px;
-    	}
-    	#containerredime {
-    		width: 600px;
-    	}
-    	.redimensionner {
-    		margin-right: 3px;
-    	}
-    	.cancel {
-    		margin-left: 3px;
-    	}
-    </style>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
+    <div class="bloc-head">
+        <div class="bloc-logo">
+            <img src="/images/Picto-Freeze4.png">
+        </div>
+        <div class="bloc-recherche">
+            <input type="text" name="search" placeholder="Rechercher " class="input_cherche">
+            <input type="submit" name="" class="sub_button">
+        </div>
+    </div>
 	<div class="container" id="containerredime">
 		<div class="titleRedimensionner">
 			<h4>Redimensionner Images</h4>
@@ -73,8 +57,15 @@
         <div class="buttonRedimensionner">
         	<button class="redimensionner">Redimensionner</button>
         	<button class="cancel">Annuler</button>
+            <button class="return"><a href="/index.php">Retour</a></button>
         </div>
     </form>
    	</div>
+    <div class="bloc-footer">
+        <div class="bloc-contact">
+            <h5>A propos</h5>
+            <p></p>
+        </div>
+    </div>
 </body>
 </html>

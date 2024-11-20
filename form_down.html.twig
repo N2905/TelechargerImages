@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Téléchargement d'images</title>
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <script src="vendor/components/jquery/jquery.min.js"></script>
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div class="bloc-head">
+        <div class="bloc-logo">
+            <img src="/images/Picto-Freeze4.png">
+        </div>
+        <div class="bloc-recherche">
+            <input type="text" name="search" placeholder="Rechercher " class="input_cherche">
+            <input type="submit" name="" class="sub_button">
+        </div>
+    </div>
+    <div class="container" id="container-down">
+        <div class="titleDown">
+            <h5>Téléchargement d'images à partir d'un fichier CSV</h5>
+        </div>
+        <form method="post" action="telecharger.php" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <label for="destination" class="col-sm-4 col-form-label">Dossier de destination : </label>
+                <div class="col-sm-6">
+                    <input type="text" name="destination" id="destination" class="form-control form-control-sm" >
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="batchSize" class="col-sm-4 col-form-label">Taille du lot : </label>
+                <div class="col-sm-6">
+                    <input type="number" name="batchSize" id="batchSize" class="form-control form-control-sm" >
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="delay" class="col-sm-4 col-form-label">Délai entre les lots (en secondes) : </label>
+                <div class="col-sm-6">
+                    <input type="number" name="delay" id="delay" class="form-control form-control-sm" >
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="linkColumn" class="col-sm-4 col-form-label">Numero du colonne qui a le lien images : </label>
+                <div class="col-sm-6">
+                    <input type="number" name="linkColumn" id="linkColumn" class="form-control form-control-sm" >
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="nameColumn" class="col-sm-4 col-form-label">Numero du colonne qui a le nom spécifique : </label>
+                <div class="col-sm-6">
+                    <input type="number" name="nameColumn" id="nameColumn" class="form-control form-control-sm" >
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="File" class="col-sm-4 col-form-label">Fichier CSV : </label>
+                <div class="col-sm-6">
+                    <input type="file" name="csvFile"  accept=".csv" class="form-control form-control-sm" > <!--csvFile-->
+                </div>
+            </div>
+            <div class="buttonDown">
+                <button class="down">Télécharger</button>
+                <button class="cancel" onclick="retourn(); return false;" id="annuler">Annuler</button>
+            </div>
+        </form>
+    </div>
+    <div class="bloc-footer">
+        <div class="bloc-contact">
+            <h5>A propos</h5>
+            <p></p>
+        </div>
+    </div> 
+</body>
+<script type="text/javascript">
+  
+
+</script>
+</html>

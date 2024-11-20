@@ -1,0 +1,171 @@
+<style type="text/css">
+	.titleDown{
+		padding:10px 0 0 0;
+	}
+	.titleDown h5 {
+		color: #198754;
+	}
+	.buttonDown button{
+		border: 2px solid #198754;
+		border-radius: 12px ;
+		width: 150px;
+		height: 2rem;
+		background-color: white;
+		font-weight: bold;
+	}
+	.buttonDown button:hover {
+		background-color: #198754;
+		color: white;
+	}
+	.buttonDown {
+		display: flex;
+	}
+	.down {
+		margin-right: 3px;
+	}
+	.cancel {
+		margin-left: 3px;
+	}
+	#container-down {
+		width: 600px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.return {
+		margin-left: 5px;
+	}
+	.return a {
+		text-decoration: none;
+		color: #000000;
+	}
+	.return a:hover {
+		color: white;
+	}
+	.titleRedimensionner{
+		padding: 10px 0 0 0;
+		color: #198754;
+	}
+	.buttonRedimensionner button {
+		width: 150px;
+		border: 2px solid #198754;
+		border-radius: 12px;
+		height: 2rem;
+		background-color: white;
+		font-weight: bold;
+	}
+	.buttonRedimensionner button:hover {
+		background-color: #198754;
+		color: white;
+	}
+	.buttonRedimensionner {
+		display: flex;
+		padding-left: 120px;
+	}
+	#containerredime {
+		width: 600px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.redimensionner {
+		margin-right: 3px;
+	}
+	.cancel {
+		margin-left: 3px;
+	}
+	.content_index {
+		display: flex;
+		gap: 2%;
+	}
+	.content_index .col_form {
+		border: 1px solid #ddd;
+		cursor: pointer;
+	}
+	.content_index .col_form a {
+		text-decoration: none;
+		padding: 10px;
+		background-color: #5f9ea0;
+		color: #fff;
+		font-weight: bold;
+	}
+	.btn {
+		padding: 10px;
+		background-color: #5f9ea0;
+		color: #fff;
+		font-weight: bold;
+	}
+	.btn:hover{
+		background-color: #527b7d;
+	}
+	.content_index .col_form a:hover {
+		background-color: #527b7d;
+	}
+	.inscrip .col_form{
+		width: 50%;
+	}
+	.content_6 {
+		margin: 14px 0 14px;
+	}
+	.content_6 button a {
+		text-decoration: none;
+		color: #000000;
+	}
+	.content_6 input {
+		color: white;
+	}
+	.col_form input {
+		width: 100%;
+	}
+
+	.container-bloc-principal {
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.container-bloc-principal .bloc img{
+		width: 500px;
+		height: 300px;
+	}
+	.container-bloc-principal .bloc {
+		display: flex;
+		flex-direction: column;
+	}
+	.bloc-head, .bloc-footer{
+		border: 1px solid #ddd;
+		padding: 10px 20px;
+		background-color: #000000;
+	}
+	.bloc-head .bloc-logo img {
+		width: 100px;
+	}
+	.bloc-footer .bloc-contact h5{
+		color: #fff;
+	}
+	.bloc-head {
+		display: flex;
+		align-items: center;
+		gap: 2%;
+	}
+	.bloc-recherche{ width:100%; }
+	.bloc-recherche .input_cherche {
+		width: 21%;
+		height: 40px;
+		background-color: #000000;
+		border: 1px solid #fff;
+		color: #fff;
+	}
+	.sub_button {
+		position: absolute;
+		left: 490px;
+		width: 1%;
+		height: 40px;
+		background: url("/images/search.svg") no-repeat;
+		border: 0;
+		background-position-y: center;
+	}
+	.show_user {
+		cursor: pointer;
+	}
+
+</style>
