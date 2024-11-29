@@ -72,6 +72,7 @@
 	.cancel {
 		margin-left: 3px;
 	}
+	.cancel a {text-decoration: none; color: #fff;}
 	.content_index {
 		display: flex;
 		gap: 2%;
@@ -166,6 +167,77 @@
 	}
 	.show_user {
 		cursor: pointer;
+	}
+	#FormInscription {background: #fff;}
+
+	.bloc-parametre{
+		display: flex;
+		gap: 1%;
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		background-color: #f7f7f7;
+	}
+	.bloc-parametre .bloc-add, .bloc-parametre .bloc-modif, .bloc-parametre .bloc-liste{
+		padding: 10px 50px;
+		border: 1px solid #ddd;
+		cursor: pointer;
+	}
+
+	.bloc-parametre a {
+		text-decoration: none;
+		color: #fff;
+	}
+	.container-user {
+		display: flex;
+	}
+	.bg-color {
+		background-color: #8f8f8c;
+	}
+	.inscrip .content {
+		display: flex;
+		align-items: center;
+	}
+	.container-bloc{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		padding-left: 20px;
+	}
+	.inscrip .content .col input {
+		width: 33%;
+	}
+	.content-btn {
+		display: flex;
+		width: 38.5%;
+		justify-content: end;
+	}
+	.cancel a:hover, .btn:hover{color: #fff;}
+
+	.tr_titre {
+		background-color: #f7f7f7;
+	}
+	.tr_titre th{
+		padding: 10px;
+	}
+
+	.listeUser {
+		padding-left: 20px;
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+	.listeUser table{
+		width: 39%;
+	}
+	.result_user td {
+		padding: 10px;
+	}
+	.active-btn {
+		background-color: #527b7d;
+	}
+	.listeUser table{
+		border: 1px solid #f7f7f7;
+
 	}
 
 </style>
