@@ -1,5 +1,6 @@
 <?php
 	require_once 'config.php';
+	
 	if (isset($_POST['ajax']) && $_POST['ajax'] == 'adduser') {
 		$nom = $_POST['nom'];
 		$prenom = $_POST['prenom'];
@@ -47,7 +48,7 @@
 						</a>
                     </td>
                     <td value= "' . htmlspecialchars($user['id']) . '">
-                    	<a href="#" onclick="updateUserForm(' .htmlspecialchars($user['id']) .');" id="btn-edit-user" title="Clique ici pour modifier">
+                    	<a href="#" onclick="updateUserForm();" id="btn-edit-user" title="Clique ici pour modifier">
                     		<img src="/images/edit.png">
                     	</a>
                     </td>
